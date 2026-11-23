@@ -1,0 +1,11 @@
+# Dependencies and Vite output
+node_modules/
+dist/
+
+# Local environment files when applicable
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log

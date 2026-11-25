@@ -30,7 +30,7 @@ function createSidebar() {
 
     const brandName = document.createElement("span");
     brandName.classList.add("brand-name");
-    brandName.textcontent = "PTO Tracker";
+    brandName.textContent = "PTO Tracker";
 
     brandContainer.append(brandMark, brandName);
 
@@ -57,8 +57,11 @@ function createTopbar(title, subtitle) {
 
     const pageTitle = document.createElement("h1");
     pageTitle.textContent = title;
+    pageTitle.classList.add("page-title");
+
     const pageSubtitle = document.createElement("p");
     pageSubtitle.textContent = subtitle;
+    pageSubtitle.classList.add("page-subtitle");
 
     textContainer.append(pageTitle, pageSubtitle);
     header.append(textContainer);
@@ -68,9 +71,7 @@ function createTopbar(title, subtitle) {
 
 export function createShell() {
     const shellDiv = document.createElement("div");
-
-    const container = document.createElement("div");
-    container.classList.add("app-shell");
+    shellDiv.classList.add("app-shell");
 
     const sidebar = createSidebar();
     const workspace = document.createElement("div");
